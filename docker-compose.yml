@@ -1,0 +1,20 @@
+app:
+  image: glassfish:4.1.2-web
+  container_name: soap_app_1
+  port:
+  - 141:8080
+  - 14148:4848
+  links:
+  - mariadb:db
+mariadb:
+  image: mariadb:10.1
+  container_name: soap_db_1
+  environment:
+  - MYSQL_DATABASE=web
+  - MYSQL_USER=admin
+  - MYSQL_PASSWORD=admin
+  - MYSQL_ROOT_PASSWORD=admin
+  volumes:
+  - /var/lib/mysql
+  ports:
+  - 14133:3306

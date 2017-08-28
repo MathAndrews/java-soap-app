@@ -1,0 +1,6 @@
+<jdbc-connection-pool driver-classname="com.mysql.jdbc.Driver" name="AppPool" res-type="java.sql.Driver">
+    <property name="password" value="admin"></property>
+    <property name="user" value="admin"></property>
+    <property name="URL" value="jdbc:mysql://mariadb:3306/web"></property>
+</jdbc-connection-pool>
+<jdbc-resource pool-name="AppPool" jndi-name="jdbc/app"></jdbc-resource>
