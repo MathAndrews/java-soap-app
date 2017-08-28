@@ -1,7 +1,7 @@
 app:
-  image: glassfish:4.1.2-web
+  image: glassfish:latest
   container_name: soap_app_1
-  port:
+  ports:
   - 141:8080
   - 14148:4848
   links:
