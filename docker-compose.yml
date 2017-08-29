@@ -1,9 +1,13 @@
 app:
   image: glassfish:latest
   container_name: soap_app_1
+  environment:
+  - ADMIN_PASSWORD=91483993
   ports:
   - 141:8080
   - 14148:4848
+  volumes:
+  - ./logs:/usr/local/glassfish4/glassfish/domains/domain1/logs/
   links:
   - mariadb:db
 mariadb:
